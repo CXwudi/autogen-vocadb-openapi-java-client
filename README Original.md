@@ -77,15 +77,15 @@ Please follow the [installation](#installation) instruction and execute the foll
 import cx.mikufan.vocadbapiclient.client.*;
 import cx.mikufan.vocadbapiclient.client.auth.*;
 import cx.mikufan.vocadbapiclient.model.*;
-import cx.mikufan.vocadbapiclient.api.ActivityEntryApiApi;
+import cx.mikufan.vocadbapiclient.api.ActivityEntryApi;
 
-public class ActivityEntryApiApiExample {
+public class ActivityEntryApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
         
-        ActivityEntryApiApi apiInstance = new ActivityEntryApiApi(defaultClient);
+        ActivityEntryApi apiInstance = new ActivityEntryApi(defaultClient);
         LocalDateTime before = new LocalDateTime(); // LocalDateTime | 
         LocalDateTime since = new LocalDateTime(); // LocalDateTime | 
         Integer userId = 56; // Integer | 
@@ -101,7 +101,7 @@ public class ActivityEntryApiApiExample {
             ActivityEntryForApiContractPartialFindResult result = apiInstance.apiActivityEntriesGet(before, since, userId, editEvent, entryType, maxResults, getTotalCount, fields, entryFields, lang, sortRule);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ActivityEntryApiApi#apiActivityEntriesGet");
+            System.err.println("Exception when calling ActivityEntryApi#apiActivityEntriesGet");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -118,134 +118,134 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActivityEntryApiApi* | [**apiActivityEntriesGet**](docs/ActivityEntryApiApi.md#apiActivityEntriesGet) | **GET** /api/activityEntries | 
-*AlbumApiApi* | [**apiAlbumsCommentsCommentIdDelete**](docs/AlbumApiApi.md#apiAlbumsCommentsCommentIdDelete) | **DELETE** /api/albums/comments/{commentId} | 
-*AlbumApiApi* | [**apiAlbumsCommentsCommentIdPost**](docs/AlbumApiApi.md#apiAlbumsCommentsCommentIdPost) | **POST** /api/albums/comments/{commentId} | 
-*AlbumApiApi* | [**apiAlbumsGet**](docs/AlbumApiApi.md#apiAlbumsGet) | **GET** /api/albums | 
-*AlbumApiApi* | [**apiAlbumsIdCommentsGet**](docs/AlbumApiApi.md#apiAlbumsIdCommentsGet) | **GET** /api/albums/{id}/comments | 
-*AlbumApiApi* | [**apiAlbumsIdCommentsPost**](docs/AlbumApiApi.md#apiAlbumsIdCommentsPost) | **POST** /api/albums/{id}/comments | 
-*AlbumApiApi* | [**apiAlbumsIdDelete**](docs/AlbumApiApi.md#apiAlbumsIdDelete) | **DELETE** /api/albums/{id} | 
-*AlbumApiApi* | [**apiAlbumsIdGet**](docs/AlbumApiApi.md#apiAlbumsIdGet) | **GET** /api/albums/{id} | 
-*AlbumApiApi* | [**apiAlbumsIdReviewsGet**](docs/AlbumApiApi.md#apiAlbumsIdReviewsGet) | **GET** /api/albums/{id}/reviews | 
-*AlbumApiApi* | [**apiAlbumsIdReviewsPost**](docs/AlbumApiApi.md#apiAlbumsIdReviewsPost) | **POST** /api/albums/{id}/reviews | 
-*AlbumApiApi* | [**apiAlbumsIdReviewsReviewIdDelete**](docs/AlbumApiApi.md#apiAlbumsIdReviewsReviewIdDelete) | **DELETE** /api/albums/{id}/reviews/{reviewId} | 
-*AlbumApiApi* | [**apiAlbumsIdTracksFieldsGet**](docs/AlbumApiApi.md#apiAlbumsIdTracksFieldsGet) | **GET** /api/albums/{id}/tracks/fields | 
-*AlbumApiApi* | [**apiAlbumsIdTracksGet**](docs/AlbumApiApi.md#apiAlbumsIdTracksGet) | **GET** /api/albums/{id}/tracks | 
-*AlbumApiApi* | [**apiAlbumsIdUserCollectionsGet**](docs/AlbumApiApi.md#apiAlbumsIdUserCollectionsGet) | **GET** /api/albums/{id}/user-collections | 
-*AlbumApiApi* | [**apiAlbumsNamesGet**](docs/AlbumApiApi.md#apiAlbumsNamesGet) | **GET** /api/albums/names | 
-*AlbumApiApi* | [**apiAlbumsNewGet**](docs/AlbumApiApi.md#apiAlbumsNewGet) | **GET** /api/albums/new | 
-*AlbumApiApi* | [**apiAlbumsTopGet**](docs/AlbumApiApi.md#apiAlbumsTopGet) | **GET** /api/albums/top | 
-*ArtistApiApi* | [**apiArtistsCommentsCommentIdDelete**](docs/ArtistApiApi.md#apiArtistsCommentsCommentIdDelete) | **DELETE** /api/artists/comments/{commentId} | 
-*ArtistApiApi* | [**apiArtistsCommentsCommentIdPost**](docs/ArtistApiApi.md#apiArtistsCommentsCommentIdPost) | **POST** /api/artists/comments/{commentId} | 
-*ArtistApiApi* | [**apiArtistsGet**](docs/ArtistApiApi.md#apiArtistsGet) | **GET** /api/artists | 
-*ArtistApiApi* | [**apiArtistsIdCommentsGet**](docs/ArtistApiApi.md#apiArtistsIdCommentsGet) | **GET** /api/artists/{id}/comments | 
-*ArtistApiApi* | [**apiArtistsIdCommentsPost**](docs/ArtistApiApi.md#apiArtistsIdCommentsPost) | **POST** /api/artists/{id}/comments | 
-*ArtistApiApi* | [**apiArtistsIdDelete**](docs/ArtistApiApi.md#apiArtistsIdDelete) | **DELETE** /api/artists/{id} | 
-*ArtistApiApi* | [**apiArtistsIdGet**](docs/ArtistApiApi.md#apiArtistsIdGet) | **GET** /api/artists/{id} | 
-*ArtistApiApi* | [**apiArtistsNamesGet**](docs/ArtistApiApi.md#apiArtistsNamesGet) | **GET** /api/artists/names | 
-*CommentApiApi* | [**apiCommentsEntryTypeCommentsCommentIdDelete**](docs/CommentApiApi.md#apiCommentsEntryTypeCommentsCommentIdDelete) | **DELETE** /api/comments/{entryType}-comments/{commentId} | 
-*CommentApiApi* | [**apiCommentsEntryTypeCommentsCommentIdPost**](docs/CommentApiApi.md#apiCommentsEntryTypeCommentsCommentIdPost) | **POST** /api/comments/{entryType}-comments/{commentId} | 
-*CommentApiApi* | [**apiCommentsEntryTypeCommentsGet**](docs/CommentApiApi.md#apiCommentsEntryTypeCommentsGet) | **GET** /api/comments/{entryType}-comments | 
-*CommentApiApi* | [**apiCommentsEntryTypeCommentsPost**](docs/CommentApiApi.md#apiCommentsEntryTypeCommentsPost) | **POST** /api/comments/{entryType}-comments | 
-*CommentApiApi* | [**apiCommentsGet**](docs/CommentApiApi.md#apiCommentsGet) | **GET** /api/comments | 
-*DiscussionApiApi* | [**apiDiscussionsCommentsCommentIdDelete**](docs/DiscussionApiApi.md#apiDiscussionsCommentsCommentIdDelete) | **DELETE** /api/discussions/comments/{commentId} | 
-*DiscussionApiApi* | [**apiDiscussionsCommentsCommentIdPost**](docs/DiscussionApiApi.md#apiDiscussionsCommentsCommentIdPost) | **POST** /api/discussions/comments/{commentId} | 
-*DiscussionApiApi* | [**apiDiscussionsFoldersFolderIdTopicsGet**](docs/DiscussionApiApi.md#apiDiscussionsFoldersFolderIdTopicsGet) | **GET** /api/discussions/folders/{folderId}/topics | 
-*DiscussionApiApi* | [**apiDiscussionsFoldersFolderIdTopicsPost**](docs/DiscussionApiApi.md#apiDiscussionsFoldersFolderIdTopicsPost) | **POST** /api/discussions/folders/{folderId}/topics | 
-*DiscussionApiApi* | [**apiDiscussionsFoldersGet**](docs/DiscussionApiApi.md#apiDiscussionsFoldersGet) | **GET** /api/discussions/folders | 
-*DiscussionApiApi* | [**apiDiscussionsFoldersPost**](docs/DiscussionApiApi.md#apiDiscussionsFoldersPost) | **POST** /api/discussions/folders | 
-*DiscussionApiApi* | [**apiDiscussionsTopicsGet**](docs/DiscussionApiApi.md#apiDiscussionsTopicsGet) | **GET** /api/discussions/topics | 
-*DiscussionApiApi* | [**apiDiscussionsTopicsTopicIdCommentsPost**](docs/DiscussionApiApi.md#apiDiscussionsTopicsTopicIdCommentsPost) | **POST** /api/discussions/topics/{topicId}/comments | 
-*DiscussionApiApi* | [**apiDiscussionsTopicsTopicIdDelete**](docs/DiscussionApiApi.md#apiDiscussionsTopicsTopicIdDelete) | **DELETE** /api/discussions/topics/{topicId} | 
-*DiscussionApiApi* | [**apiDiscussionsTopicsTopicIdGet**](docs/DiscussionApiApi.md#apiDiscussionsTopicsTopicIdGet) | **GET** /api/discussions/topics/{topicId} | 
-*DiscussionApiApi* | [**apiDiscussionsTopicsTopicIdPost**](docs/DiscussionApiApi.md#apiDiscussionsTopicsTopicIdPost) | **POST** /api/discussions/topics/{topicId} | 
-*EntryApiApi* | [**apiEntriesGet**](docs/EntryApiApi.md#apiEntriesGet) | **GET** /api/entries | 
-*EntryApiApi* | [**apiEntriesNamesGet**](docs/EntryApiApi.md#apiEntriesNamesGet) | **GET** /api/entries/names | 
-*EntryTypesApiApi* | [**apiEntryTypesEntryTypeSubTypeTagGet**](docs/EntryTypesApiApi.md#apiEntryTypesEntryTypeSubTypeTagGet) | **GET** /api/entry-types/{entryType}/{subType}/tag | 
-*PvApiApi* | [**apiPvsForSongsGet**](docs/PvApiApi.md#apiPvsForSongsGet) | **GET** /api/pvs/for-songs | 
-*ReleaseEventApiApi* | [**apiReleaseEventsEventIdAlbumsGet**](docs/ReleaseEventApiApi.md#apiReleaseEventsEventIdAlbumsGet) | **GET** /api/releaseEvents/{eventId}/albums | 
-*ReleaseEventApiApi* | [**apiReleaseEventsEventIdPublishedSongsGet**](docs/ReleaseEventApiApi.md#apiReleaseEventsEventIdPublishedSongsGet) | **GET** /api/releaseEvents/{eventId}/published-songs | 
-*ReleaseEventApiApi* | [**apiReleaseEventsEventIdReportsPost**](docs/ReleaseEventApiApi.md#apiReleaseEventsEventIdReportsPost) | **POST** /api/releaseEvents/{eventId}/reports | 
-*ReleaseEventApiApi* | [**apiReleaseEventsGet**](docs/ReleaseEventApiApi.md#apiReleaseEventsGet) | **GET** /api/releaseEvents | 
-*ReleaseEventApiApi* | [**apiReleaseEventsIdDelete**](docs/ReleaseEventApiApi.md#apiReleaseEventsIdDelete) | **DELETE** /api/releaseEvents/{id} | 
-*ReleaseEventApiApi* | [**apiReleaseEventsIdGet**](docs/ReleaseEventApiApi.md#apiReleaseEventsIdGet) | **GET** /api/releaseEvents/{id} | 
-*ReleaseEventApiApi* | [**apiReleaseEventsNamesGet**](docs/ReleaseEventApiApi.md#apiReleaseEventsNamesGet) | **GET** /api/releaseEvents/names | 
-*ReleaseEventSeriesApiApi* | [**apiReleaseEventSeriesGet**](docs/ReleaseEventSeriesApiApi.md#apiReleaseEventSeriesGet) | **GET** /api/releaseEventSeries | 
-*ReleaseEventSeriesApiApi* | [**apiReleaseEventSeriesIdDelete**](docs/ReleaseEventSeriesApiApi.md#apiReleaseEventSeriesIdDelete) | **DELETE** /api/releaseEventSeries/{id} | 
-*ReleaseEventSeriesApiApi* | [**apiReleaseEventSeriesIdGet**](docs/ReleaseEventSeriesApiApi.md#apiReleaseEventSeriesIdGet) | **GET** /api/releaseEventSeries/{id} | 
-*ResourcesApiApi* | [**apiResourcesCultureCodeGet**](docs/ResourcesApiApi.md#apiResourcesCultureCodeGet) | **GET** /api/resources/{cultureCode} | 
-*SongApiApi* | [**apiSongsByPvGet**](docs/SongApiApi.md#apiSongsByPvGet) | **GET** /api/songs/byPv | 
-*SongApiApi* | [**apiSongsCommentsCommentIdDelete**](docs/SongApiApi.md#apiSongsCommentsCommentIdDelete) | **DELETE** /api/songs/comments/{commentId} | 
-*SongApiApi* | [**apiSongsCommentsCommentIdPost**](docs/SongApiApi.md#apiSongsCommentsCommentIdPost) | **POST** /api/songs/comments/{commentId} | 
-*SongApiApi* | [**apiSongsGet**](docs/SongApiApi.md#apiSongsGet) | **GET** /api/songs | 
-*SongApiApi* | [**apiSongsHighlightedGet**](docs/SongApiApi.md#apiSongsHighlightedGet) | **GET** /api/songs/highlighted | 
-*SongApiApi* | [**apiSongsIdCommentsGet**](docs/SongApiApi.md#apiSongsIdCommentsGet) | **GET** /api/songs/{id}/comments | 
-*SongApiApi* | [**apiSongsIdCommentsPost**](docs/SongApiApi.md#apiSongsIdCommentsPost) | **POST** /api/songs/{id}/comments | 
-*SongApiApi* | [**apiSongsIdDelete**](docs/SongApiApi.md#apiSongsIdDelete) | **DELETE** /api/songs/{id} | 
-*SongApiApi* | [**apiSongsIdDerivedGet**](docs/SongApiApi.md#apiSongsIdDerivedGet) | **GET** /api/songs/{id}/derived | 
-*SongApiApi* | [**apiSongsIdGet**](docs/SongApiApi.md#apiSongsIdGet) | **GET** /api/songs/{id} | 
-*SongApiApi* | [**apiSongsIdRatingsGet**](docs/SongApiApi.md#apiSongsIdRatingsGet) | **GET** /api/songs/{id}/ratings | 
-*SongApiApi* | [**apiSongsIdRatingsPost**](docs/SongApiApi.md#apiSongsIdRatingsPost) | **POST** /api/songs/{id}/ratings | 
-*SongApiApi* | [**apiSongsIdRelatedGet**](docs/SongApiApi.md#apiSongsIdRelatedGet) | **GET** /api/songs/{id}/related | 
-*SongApiApi* | [**apiSongsLyricsLyricsIdGet**](docs/SongApiApi.md#apiSongsLyricsLyricsIdGet) | **GET** /api/songs/lyrics/{lyricsId} | 
-*SongApiApi* | [**apiSongsNamesGet**](docs/SongApiApi.md#apiSongsNamesGet) | **GET** /api/songs/names | 
-*SongApiApi* | [**apiSongsTopRatedGet**](docs/SongApiApi.md#apiSongsTopRatedGet) | **GET** /api/songs/top-rated | 
-*SongListApiApi* | [**apiSongListsCommentsCommentIdDelete**](docs/SongListApiApi.md#apiSongListsCommentsCommentIdDelete) | **DELETE** /api/songLists/comments/{commentId} | 
-*SongListApiApi* | [**apiSongListsCommentsCommentIdPost**](docs/SongListApiApi.md#apiSongListsCommentsCommentIdPost) | **POST** /api/songLists/comments/{commentId} | 
-*SongListApiApi* | [**apiSongListsFeaturedGet**](docs/SongListApiApi.md#apiSongListsFeaturedGet) | **GET** /api/songLists/featured | 
-*SongListApiApi* | [**apiSongListsFeaturedNamesGet**](docs/SongListApiApi.md#apiSongListsFeaturedNamesGet) | **GET** /api/songLists/featured/names | 
-*SongListApiApi* | [**apiSongListsIdDelete**](docs/SongListApiApi.md#apiSongListsIdDelete) | **DELETE** /api/songLists/{id} | 
-*SongListApiApi* | [**apiSongListsListIdCommentsGet**](docs/SongListApiApi.md#apiSongListsListIdCommentsGet) | **GET** /api/songLists/{listId}/comments | 
-*SongListApiApi* | [**apiSongListsListIdCommentsPost**](docs/SongListApiApi.md#apiSongListsListIdCommentsPost) | **POST** /api/songLists/{listId}/comments | 
-*SongListApiApi* | [**apiSongListsListIdSongsGet**](docs/SongListApiApi.md#apiSongListsListIdSongsGet) | **GET** /api/songLists/{listId}/songs | 
-*SongListApiApi* | [**apiSongListsPost**](docs/SongListApiApi.md#apiSongListsPost) | **POST** /api/songLists | 
-*TagApiApi* | [**apiTagsByNameNameGet**](docs/TagApiApi.md#apiTagsByNameNameGet) | **GET** /api/tags/byName/{name} | 
-*TagApiApi* | [**apiTagsCategoryNamesGet**](docs/TagApiApi.md#apiTagsCategoryNamesGet) | **GET** /api/tags/categoryNames | 
-*TagApiApi* | [**apiTagsCommentsCommentIdDelete**](docs/TagApiApi.md#apiTagsCommentsCommentIdDelete) | **DELETE** /api/tags/comments/{commentId} | 
-*TagApiApi* | [**apiTagsCommentsCommentIdPost**](docs/TagApiApi.md#apiTagsCommentsCommentIdPost) | **POST** /api/tags/comments/{commentId} | 
-*TagApiApi* | [**apiTagsGet**](docs/TagApiApi.md#apiTagsGet) | **GET** /api/tags | 
-*TagApiApi* | [**apiTagsIdDelete**](docs/TagApiApi.md#apiTagsIdDelete) | **DELETE** /api/tags/{id} | 
-*TagApiApi* | [**apiTagsIdGet**](docs/TagApiApi.md#apiTagsIdGet) | **GET** /api/tags/{id} | 
-*TagApiApi* | [**apiTagsNamesGet**](docs/TagApiApi.md#apiTagsNamesGet) | **GET** /api/tags/names | 
-*TagApiApi* | [**apiTagsPost**](docs/TagApiApi.md#apiTagsPost) | **POST** /api/tags | 
-*TagApiApi* | [**apiTagsTagIdChildrenGet**](docs/TagApiApi.md#apiTagsTagIdChildrenGet) | **GET** /api/tags/{tagId}/children | 
-*TagApiApi* | [**apiTagsTagIdCommentsGet**](docs/TagApiApi.md#apiTagsTagIdCommentsGet) | **GET** /api/tags/{tagId}/comments | 
-*TagApiApi* | [**apiTagsTagIdCommentsPost**](docs/TagApiApi.md#apiTagsTagIdCommentsPost) | **POST** /api/tags/{tagId}/comments | 
-*TagApiApi* | [**apiTagsTagIdReportsPost**](docs/TagApiApi.md#apiTagsTagIdReportsPost) | **POST** /api/tags/{tagId}/reports | 
-*TagApiApi* | [**apiTagsTopGet**](docs/TagApiApi.md#apiTagsTopGet) | **GET** /api/tags/top | 
-*UserApiApi* | [**apiUsersCurrentAlbumCollectionStatusesAlbumIdGet**](docs/UserApiApi.md#apiUsersCurrentAlbumCollectionStatusesAlbumIdGet) | **GET** /api/users/current/album-collection-statuses/{albumId} | 
-*UserApiApi* | [**apiUsersCurrentAlbumsAlbumIdPost**](docs/UserApiApi.md#apiUsersCurrentAlbumsAlbumIdPost) | **POST** /api/users/current/albums/{albumId} | 
-*UserApiApi* | [**apiUsersCurrentFollowedArtistsArtistIdGet**](docs/UserApiApi.md#apiUsersCurrentFollowedArtistsArtistIdGet) | **GET** /api/users/current/followedArtists/{artistId} | 
-*UserApiApi* | [**apiUsersCurrentFollowedTagsTagIdDelete**](docs/UserApiApi.md#apiUsersCurrentFollowedTagsTagIdDelete) | **DELETE** /api/users/current/followedTags/{tagId} | 
-*UserApiApi* | [**apiUsersCurrentFollowedTagsTagIdPost**](docs/UserApiApi.md#apiUsersCurrentFollowedTagsTagIdPost) | **POST** /api/users/current/followedTags/{tagId} | 
-*UserApiApi* | [**apiUsersCurrentGet**](docs/UserApiApi.md#apiUsersCurrentGet) | **GET** /api/users/current | 
-*UserApiApi* | [**apiUsersCurrentRatedSongsSongIdGet**](docs/UserApiApi.md#apiUsersCurrentRatedSongsSongIdGet) | **GET** /api/users/current/ratedSongs/{songId} | 
-*UserApiApi* | [**apiUsersCurrentRefreshEntryEditPost**](docs/UserApiApi.md#apiUsersCurrentRefreshEntryEditPost) | **POST** /api/users/current/refreshEntryEdit | 
-*UserApiApi* | [**apiUsersCurrentSongTagsSongIdPost**](docs/UserApiApi.md#apiUsersCurrentSongTagsSongIdPost) | **POST** /api/users/current/songTags/{songId} | 
-*UserApiApi* | [**apiUsersGet**](docs/UserApiApi.md#apiUsersGet) | **GET** /api/users | 
-*UserApiApi* | [**apiUsersIdAlbumCollectionStatusesAlbumIdGet**](docs/UserApiApi.md#apiUsersIdAlbumCollectionStatusesAlbumIdGet) | **GET** /api/users/{id}/album-collection-statuses/{albumId} | 
-*UserApiApi* | [**apiUsersIdAlbumsGet**](docs/UserApiApi.md#apiUsersIdAlbumsGet) | **GET** /api/users/{id}/albums | 
-*UserApiApi* | [**apiUsersIdEventsGet**](docs/UserApiApi.md#apiUsersIdEventsGet) | **GET** /api/users/{id}/events | 
-*UserApiApi* | [**apiUsersIdFollowedArtistsArtistIdGet**](docs/UserApiApi.md#apiUsersIdFollowedArtistsArtistIdGet) | **GET** /api/users/{id}/followedArtists/{artistId} | 
-*UserApiApi* | [**apiUsersIdFollowedArtistsGet**](docs/UserApiApi.md#apiUsersIdFollowedArtistsGet) | **GET** /api/users/{id}/followedArtists | 
-*UserApiApi* | [**apiUsersIdGet**](docs/UserApiApi.md#apiUsersIdGet) | **GET** /api/users/{id} | 
-*UserApiApi* | [**apiUsersIdMessagesDelete**](docs/UserApiApi.md#apiUsersIdMessagesDelete) | **DELETE** /api/users/{id}/messages | 
-*UserApiApi* | [**apiUsersIdMessagesGet**](docs/UserApiApi.md#apiUsersIdMessagesGet) | **GET** /api/users/{id}/messages | 
-*UserApiApi* | [**apiUsersIdMessagesPost**](docs/UserApiApi.md#apiUsersIdMessagesPost) | **POST** /api/users/{id}/messages | 
-*UserApiApi* | [**apiUsersIdProfileCommentsGet**](docs/UserApiApi.md#apiUsersIdProfileCommentsGet) | **GET** /api/users/{id}/profileComments | 
-*UserApiApi* | [**apiUsersIdProfileCommentsPost**](docs/UserApiApi.md#apiUsersIdProfileCommentsPost) | **POST** /api/users/{id}/profileComments | 
-*UserApiApi* | [**apiUsersIdRatedSongsGet**](docs/UserApiApi.md#apiUsersIdRatedSongsGet) | **GET** /api/users/{id}/ratedSongs | 
-*UserApiApi* | [**apiUsersIdRatedSongsSongIdGet**](docs/UserApiApi.md#apiUsersIdRatedSongsSongIdGet) | **GET** /api/users/{id}/ratedSongs/{songId} | 
-*UserApiApi* | [**apiUsersIdReportsPost**](docs/UserApiApi.md#apiUsersIdReportsPost) | **POST** /api/users/{id}/reports | 
-*UserApiApi* | [**apiUsersIdSettingsSettingNamePost**](docs/UserApiApi.md#apiUsersIdSettingsSettingNamePost) | **POST** /api/users/{id}/settings/{settingName} | 
-*UserApiApi* | [**apiUsersIdSongListsGet**](docs/UserApiApi.md#apiUsersIdSongListsGet) | **GET** /api/users/{id}/songLists | 
-*UserApiApi* | [**apiUsersMessagesMessageIdGet**](docs/UserApiApi.md#apiUsersMessagesMessageIdGet) | **GET** /api/users/messages/{messageId} | 
-*UserApiApi* | [**apiUsersNamesGet**](docs/UserApiApi.md#apiUsersNamesGet) | **GET** /api/users/names | 
-*UserApiApi* | [**apiUsersProfileCommentsCommentIdDelete**](docs/UserApiApi.md#apiUsersProfileCommentsCommentIdDelete) | **DELETE** /api/users/profileComments/{commentId} | 
-*UserApiApi* | [**apiUsersProfileCommentsCommentIdPost**](docs/UserApiApi.md#apiUsersProfileCommentsCommentIdPost) | **POST** /api/users/profileComments/{commentId} | 
-*VenueApiApi* | [**apiVenuesGet**](docs/VenueApiApi.md#apiVenuesGet) | **GET** /api/venues | 
-*VenueApiApi* | [**apiVenuesIdDelete**](docs/VenueApiApi.md#apiVenuesIdDelete) | **DELETE** /api/venues/{id} | 
-*VenueApiApi* | [**apiVenuesIdReportsPost**](docs/VenueApiApi.md#apiVenuesIdReportsPost) | **POST** /api/venues/{id}/reports | 
+*ActivityEntryApi* | [**apiActivityEntriesGet**](docs/ActivityEntryApi.md#apiActivityEntriesGet) | **GET** /api/activityEntries | 
+*AlbumApi* | [**apiAlbumsCommentsCommentIdDelete**](docs/AlbumApi.md#apiAlbumsCommentsCommentIdDelete) | **DELETE** /api/albums/comments/{commentId} | 
+*AlbumApi* | [**apiAlbumsCommentsCommentIdPost**](docs/AlbumApi.md#apiAlbumsCommentsCommentIdPost) | **POST** /api/albums/comments/{commentId} | 
+*AlbumApi* | [**apiAlbumsGet**](docs/AlbumApi.md#apiAlbumsGet) | **GET** /api/albums | 
+*AlbumApi* | [**apiAlbumsIdCommentsGet**](docs/AlbumApi.md#apiAlbumsIdCommentsGet) | **GET** /api/albums/{id}/comments | 
+*AlbumApi* | [**apiAlbumsIdCommentsPost**](docs/AlbumApi.md#apiAlbumsIdCommentsPost) | **POST** /api/albums/{id}/comments | 
+*AlbumApi* | [**apiAlbumsIdDelete**](docs/AlbumApi.md#apiAlbumsIdDelete) | **DELETE** /api/albums/{id} | 
+*AlbumApi* | [**apiAlbumsIdGet**](docs/AlbumApi.md#apiAlbumsIdGet) | **GET** /api/albums/{id} | 
+*AlbumApi* | [**apiAlbumsIdReviewsGet**](docs/AlbumApi.md#apiAlbumsIdReviewsGet) | **GET** /api/albums/{id}/reviews | 
+*AlbumApi* | [**apiAlbumsIdReviewsPost**](docs/AlbumApi.md#apiAlbumsIdReviewsPost) | **POST** /api/albums/{id}/reviews | 
+*AlbumApi* | [**apiAlbumsIdReviewsReviewIdDelete**](docs/AlbumApi.md#apiAlbumsIdReviewsReviewIdDelete) | **DELETE** /api/albums/{id}/reviews/{reviewId} | 
+*AlbumApi* | [**apiAlbumsIdTracksFieldsGet**](docs/AlbumApi.md#apiAlbumsIdTracksFieldsGet) | **GET** /api/albums/{id}/tracks/fields | 
+*AlbumApi* | [**apiAlbumsIdTracksGet**](docs/AlbumApi.md#apiAlbumsIdTracksGet) | **GET** /api/albums/{id}/tracks | 
+*AlbumApi* | [**apiAlbumsIdUserCollectionsGet**](docs/AlbumApi.md#apiAlbumsIdUserCollectionsGet) | **GET** /api/albums/{id}/user-collections | 
+*AlbumApi* | [**apiAlbumsNamesGet**](docs/AlbumApi.md#apiAlbumsNamesGet) | **GET** /api/albums/names | 
+*AlbumApi* | [**apiAlbumsNewGet**](docs/AlbumApi.md#apiAlbumsNewGet) | **GET** /api/albums/new | 
+*AlbumApi* | [**apiAlbumsTopGet**](docs/AlbumApi.md#apiAlbumsTopGet) | **GET** /api/albums/top | 
+*ArtistApi* | [**apiArtistsCommentsCommentIdDelete**](docs/ArtistApi.md#apiArtistsCommentsCommentIdDelete) | **DELETE** /api/artists/comments/{commentId} | 
+*ArtistApi* | [**apiArtistsCommentsCommentIdPost**](docs/ArtistApi.md#apiArtistsCommentsCommentIdPost) | **POST** /api/artists/comments/{commentId} | 
+*ArtistApi* | [**apiArtistsGet**](docs/ArtistApi.md#apiArtistsGet) | **GET** /api/artists | 
+*ArtistApi* | [**apiArtistsIdCommentsGet**](docs/ArtistApi.md#apiArtistsIdCommentsGet) | **GET** /api/artists/{id}/comments | 
+*ArtistApi* | [**apiArtistsIdCommentsPost**](docs/ArtistApi.md#apiArtistsIdCommentsPost) | **POST** /api/artists/{id}/comments | 
+*ArtistApi* | [**apiArtistsIdDelete**](docs/ArtistApi.md#apiArtistsIdDelete) | **DELETE** /api/artists/{id} | 
+*ArtistApi* | [**apiArtistsIdGet**](docs/ArtistApi.md#apiArtistsIdGet) | **GET** /api/artists/{id} | 
+*ArtistApi* | [**apiArtistsNamesGet**](docs/ArtistApi.md#apiArtistsNamesGet) | **GET** /api/artists/names | 
+*CommentApi* | [**apiCommentsEntryTypeCommentsCommentIdDelete**](docs/CommentApi.md#apiCommentsEntryTypeCommentsCommentIdDelete) | **DELETE** /api/comments/{entryType}-comments/{commentId} | 
+*CommentApi* | [**apiCommentsEntryTypeCommentsCommentIdPost**](docs/CommentApi.md#apiCommentsEntryTypeCommentsCommentIdPost) | **POST** /api/comments/{entryType}-comments/{commentId} | 
+*CommentApi* | [**apiCommentsEntryTypeCommentsGet**](docs/CommentApi.md#apiCommentsEntryTypeCommentsGet) | **GET** /api/comments/{entryType}-comments | 
+*CommentApi* | [**apiCommentsEntryTypeCommentsPost**](docs/CommentApi.md#apiCommentsEntryTypeCommentsPost) | **POST** /api/comments/{entryType}-comments | 
+*CommentApi* | [**apiCommentsGet**](docs/CommentApi.md#apiCommentsGet) | **GET** /api/comments | 
+*DiscussionApi* | [**apiDiscussionsCommentsCommentIdDelete**](docs/DiscussionApi.md#apiDiscussionsCommentsCommentIdDelete) | **DELETE** /api/discussions/comments/{commentId} | 
+*DiscussionApi* | [**apiDiscussionsCommentsCommentIdPost**](docs/DiscussionApi.md#apiDiscussionsCommentsCommentIdPost) | **POST** /api/discussions/comments/{commentId} | 
+*DiscussionApi* | [**apiDiscussionsFoldersFolderIdTopicsGet**](docs/DiscussionApi.md#apiDiscussionsFoldersFolderIdTopicsGet) | **GET** /api/discussions/folders/{folderId}/topics | 
+*DiscussionApi* | [**apiDiscussionsFoldersFolderIdTopicsPost**](docs/DiscussionApi.md#apiDiscussionsFoldersFolderIdTopicsPost) | **POST** /api/discussions/folders/{folderId}/topics | 
+*DiscussionApi* | [**apiDiscussionsFoldersGet**](docs/DiscussionApi.md#apiDiscussionsFoldersGet) | **GET** /api/discussions/folders | 
+*DiscussionApi* | [**apiDiscussionsFoldersPost**](docs/DiscussionApi.md#apiDiscussionsFoldersPost) | **POST** /api/discussions/folders | 
+*DiscussionApi* | [**apiDiscussionsTopicsGet**](docs/DiscussionApi.md#apiDiscussionsTopicsGet) | **GET** /api/discussions/topics | 
+*DiscussionApi* | [**apiDiscussionsTopicsTopicIdCommentsPost**](docs/DiscussionApi.md#apiDiscussionsTopicsTopicIdCommentsPost) | **POST** /api/discussions/topics/{topicId}/comments | 
+*DiscussionApi* | [**apiDiscussionsTopicsTopicIdDelete**](docs/DiscussionApi.md#apiDiscussionsTopicsTopicIdDelete) | **DELETE** /api/discussions/topics/{topicId} | 
+*DiscussionApi* | [**apiDiscussionsTopicsTopicIdGet**](docs/DiscussionApi.md#apiDiscussionsTopicsTopicIdGet) | **GET** /api/discussions/topics/{topicId} | 
+*DiscussionApi* | [**apiDiscussionsTopicsTopicIdPost**](docs/DiscussionApi.md#apiDiscussionsTopicsTopicIdPost) | **POST** /api/discussions/topics/{topicId} | 
+*EntryApi* | [**apiEntriesGet**](docs/EntryApi.md#apiEntriesGet) | **GET** /api/entries | 
+*EntryApi* | [**apiEntriesNamesGet**](docs/EntryApi.md#apiEntriesNamesGet) | **GET** /api/entries/names | 
+*EntryTypesApi* | [**apiEntryTypesEntryTypeSubTypeTagGet**](docs/EntryTypesApi.md#apiEntryTypesEntryTypeSubTypeTagGet) | **GET** /api/entry-types/{entryType}/{subType}/tag | 
+*PvApi* | [**apiPvsForSongsGet**](docs/PvApi.md#apiPvsForSongsGet) | **GET** /api/pvs/for-songs | 
+*ReleaseEventApi* | [**apiReleaseEventsEventIdAlbumsGet**](docs/ReleaseEventApi.md#apiReleaseEventsEventIdAlbumsGet) | **GET** /api/releaseEvents/{eventId}/albums | 
+*ReleaseEventApi* | [**apiReleaseEventsEventIdPublishedSongsGet**](docs/ReleaseEventApi.md#apiReleaseEventsEventIdPublishedSongsGet) | **GET** /api/releaseEvents/{eventId}/published-songs | 
+*ReleaseEventApi* | [**apiReleaseEventsEventIdReportsPost**](docs/ReleaseEventApi.md#apiReleaseEventsEventIdReportsPost) | **POST** /api/releaseEvents/{eventId}/reports | 
+*ReleaseEventApi* | [**apiReleaseEventsGet**](docs/ReleaseEventApi.md#apiReleaseEventsGet) | **GET** /api/releaseEvents | 
+*ReleaseEventApi* | [**apiReleaseEventsIdDelete**](docs/ReleaseEventApi.md#apiReleaseEventsIdDelete) | **DELETE** /api/releaseEvents/{id} | 
+*ReleaseEventApi* | [**apiReleaseEventsIdGet**](docs/ReleaseEventApi.md#apiReleaseEventsIdGet) | **GET** /api/releaseEvents/{id} | 
+*ReleaseEventApi* | [**apiReleaseEventsNamesGet**](docs/ReleaseEventApi.md#apiReleaseEventsNamesGet) | **GET** /api/releaseEvents/names | 
+*ReleaseEventSeriesApi* | [**apiReleaseEventSeriesGet**](docs/ReleaseEventSeriesApi.md#apiReleaseEventSeriesGet) | **GET** /api/releaseEventSeries | 
+*ReleaseEventSeriesApi* | [**apiReleaseEventSeriesIdDelete**](docs/ReleaseEventSeriesApi.md#apiReleaseEventSeriesIdDelete) | **DELETE** /api/releaseEventSeries/{id} | 
+*ReleaseEventSeriesApi* | [**apiReleaseEventSeriesIdGet**](docs/ReleaseEventSeriesApi.md#apiReleaseEventSeriesIdGet) | **GET** /api/releaseEventSeries/{id} | 
+*ResourcesApi* | [**apiResourcesCultureCodeGet**](docs/ResourcesApi.md#apiResourcesCultureCodeGet) | **GET** /api/resources/{cultureCode} | 
+*SongApi* | [**apiSongsByPvGet**](docs/SongApi.md#apiSongsByPvGet) | **GET** /api/songs/byPv | 
+*SongApi* | [**apiSongsCommentsCommentIdDelete**](docs/SongApi.md#apiSongsCommentsCommentIdDelete) | **DELETE** /api/songs/comments/{commentId} | 
+*SongApi* | [**apiSongsCommentsCommentIdPost**](docs/SongApi.md#apiSongsCommentsCommentIdPost) | **POST** /api/songs/comments/{commentId} | 
+*SongApi* | [**apiSongsGet**](docs/SongApi.md#apiSongsGet) | **GET** /api/songs | 
+*SongApi* | [**apiSongsHighlightedGet**](docs/SongApi.md#apiSongsHighlightedGet) | **GET** /api/songs/highlighted | 
+*SongApi* | [**apiSongsIdCommentsGet**](docs/SongApi.md#apiSongsIdCommentsGet) | **GET** /api/songs/{id}/comments | 
+*SongApi* | [**apiSongsIdCommentsPost**](docs/SongApi.md#apiSongsIdCommentsPost) | **POST** /api/songs/{id}/comments | 
+*SongApi* | [**apiSongsIdDelete**](docs/SongApi.md#apiSongsIdDelete) | **DELETE** /api/songs/{id} | 
+*SongApi* | [**apiSongsIdDerivedGet**](docs/SongApi.md#apiSongsIdDerivedGet) | **GET** /api/songs/{id}/derived | 
+*SongApi* | [**apiSongsIdGet**](docs/SongApi.md#apiSongsIdGet) | **GET** /api/songs/{id} | 
+*SongApi* | [**apiSongsIdRatingsGet**](docs/SongApi.md#apiSongsIdRatingsGet) | **GET** /api/songs/{id}/ratings | 
+*SongApi* | [**apiSongsIdRatingsPost**](docs/SongApi.md#apiSongsIdRatingsPost) | **POST** /api/songs/{id}/ratings | 
+*SongApi* | [**apiSongsIdRelatedGet**](docs/SongApi.md#apiSongsIdRelatedGet) | **GET** /api/songs/{id}/related | 
+*SongApi* | [**apiSongsLyricsLyricsIdGet**](docs/SongApi.md#apiSongsLyricsLyricsIdGet) | **GET** /api/songs/lyrics/{lyricsId} | 
+*SongApi* | [**apiSongsNamesGet**](docs/SongApi.md#apiSongsNamesGet) | **GET** /api/songs/names | 
+*SongApi* | [**apiSongsTopRatedGet**](docs/SongApi.md#apiSongsTopRatedGet) | **GET** /api/songs/top-rated | 
+*SongListApi* | [**apiSongListsCommentsCommentIdDelete**](docs/SongListApi.md#apiSongListsCommentsCommentIdDelete) | **DELETE** /api/songLists/comments/{commentId} | 
+*SongListApi* | [**apiSongListsCommentsCommentIdPost**](docs/SongListApi.md#apiSongListsCommentsCommentIdPost) | **POST** /api/songLists/comments/{commentId} | 
+*SongListApi* | [**apiSongListsFeaturedGet**](docs/SongListApi.md#apiSongListsFeaturedGet) | **GET** /api/songLists/featured | 
+*SongListApi* | [**apiSongListsFeaturedNamesGet**](docs/SongListApi.md#apiSongListsFeaturedNamesGet) | **GET** /api/songLists/featured/names | 
+*SongListApi* | [**apiSongListsIdDelete**](docs/SongListApi.md#apiSongListsIdDelete) | **DELETE** /api/songLists/{id} | 
+*SongListApi* | [**apiSongListsListIdCommentsGet**](docs/SongListApi.md#apiSongListsListIdCommentsGet) | **GET** /api/songLists/{listId}/comments | 
+*SongListApi* | [**apiSongListsListIdCommentsPost**](docs/SongListApi.md#apiSongListsListIdCommentsPost) | **POST** /api/songLists/{listId}/comments | 
+*SongListApi* | [**apiSongListsListIdSongsGet**](docs/SongListApi.md#apiSongListsListIdSongsGet) | **GET** /api/songLists/{listId}/songs | 
+*SongListApi* | [**apiSongListsPost**](docs/SongListApi.md#apiSongListsPost) | **POST** /api/songLists | 
+*TagApi* | [**apiTagsByNameNameGet**](docs/TagApi.md#apiTagsByNameNameGet) | **GET** /api/tags/byName/{name} | 
+*TagApi* | [**apiTagsCategoryNamesGet**](docs/TagApi.md#apiTagsCategoryNamesGet) | **GET** /api/tags/categoryNames | 
+*TagApi* | [**apiTagsCommentsCommentIdDelete**](docs/TagApi.md#apiTagsCommentsCommentIdDelete) | **DELETE** /api/tags/comments/{commentId} | 
+*TagApi* | [**apiTagsCommentsCommentIdPost**](docs/TagApi.md#apiTagsCommentsCommentIdPost) | **POST** /api/tags/comments/{commentId} | 
+*TagApi* | [**apiTagsGet**](docs/TagApi.md#apiTagsGet) | **GET** /api/tags | 
+*TagApi* | [**apiTagsIdDelete**](docs/TagApi.md#apiTagsIdDelete) | **DELETE** /api/tags/{id} | 
+*TagApi* | [**apiTagsIdGet**](docs/TagApi.md#apiTagsIdGet) | **GET** /api/tags/{id} | 
+*TagApi* | [**apiTagsNamesGet**](docs/TagApi.md#apiTagsNamesGet) | **GET** /api/tags/names | 
+*TagApi* | [**apiTagsPost**](docs/TagApi.md#apiTagsPost) | **POST** /api/tags | 
+*TagApi* | [**apiTagsTagIdChildrenGet**](docs/TagApi.md#apiTagsTagIdChildrenGet) | **GET** /api/tags/{tagId}/children | 
+*TagApi* | [**apiTagsTagIdCommentsGet**](docs/TagApi.md#apiTagsTagIdCommentsGet) | **GET** /api/tags/{tagId}/comments | 
+*TagApi* | [**apiTagsTagIdCommentsPost**](docs/TagApi.md#apiTagsTagIdCommentsPost) | **POST** /api/tags/{tagId}/comments | 
+*TagApi* | [**apiTagsTagIdReportsPost**](docs/TagApi.md#apiTagsTagIdReportsPost) | **POST** /api/tags/{tagId}/reports | 
+*TagApi* | [**apiTagsTopGet**](docs/TagApi.md#apiTagsTopGet) | **GET** /api/tags/top | 
+*UserApi* | [**apiUsersCurrentAlbumCollectionStatusesAlbumIdGet**](docs/UserApi.md#apiUsersCurrentAlbumCollectionStatusesAlbumIdGet) | **GET** /api/users/current/album-collection-statuses/{albumId} | 
+*UserApi* | [**apiUsersCurrentAlbumsAlbumIdPost**](docs/UserApi.md#apiUsersCurrentAlbumsAlbumIdPost) | **POST** /api/users/current/albums/{albumId} | 
+*UserApi* | [**apiUsersCurrentFollowedArtistsArtistIdGet**](docs/UserApi.md#apiUsersCurrentFollowedArtistsArtistIdGet) | **GET** /api/users/current/followedArtists/{artistId} | 
+*UserApi* | [**apiUsersCurrentFollowedTagsTagIdDelete**](docs/UserApi.md#apiUsersCurrentFollowedTagsTagIdDelete) | **DELETE** /api/users/current/followedTags/{tagId} | 
+*UserApi* | [**apiUsersCurrentFollowedTagsTagIdPost**](docs/UserApi.md#apiUsersCurrentFollowedTagsTagIdPost) | **POST** /api/users/current/followedTags/{tagId} | 
+*UserApi* | [**apiUsersCurrentGet**](docs/UserApi.md#apiUsersCurrentGet) | **GET** /api/users/current | 
+*UserApi* | [**apiUsersCurrentRatedSongsSongIdGet**](docs/UserApi.md#apiUsersCurrentRatedSongsSongIdGet) | **GET** /api/users/current/ratedSongs/{songId} | 
+*UserApi* | [**apiUsersCurrentRefreshEntryEditPost**](docs/UserApi.md#apiUsersCurrentRefreshEntryEditPost) | **POST** /api/users/current/refreshEntryEdit | 
+*UserApi* | [**apiUsersCurrentSongTagsSongIdPost**](docs/UserApi.md#apiUsersCurrentSongTagsSongIdPost) | **POST** /api/users/current/songTags/{songId} | 
+*UserApi* | [**apiUsersGet**](docs/UserApi.md#apiUsersGet) | **GET** /api/users | 
+*UserApi* | [**apiUsersIdAlbumCollectionStatusesAlbumIdGet**](docs/UserApi.md#apiUsersIdAlbumCollectionStatusesAlbumIdGet) | **GET** /api/users/{id}/album-collection-statuses/{albumId} | 
+*UserApi* | [**apiUsersIdAlbumsGet**](docs/UserApi.md#apiUsersIdAlbumsGet) | **GET** /api/users/{id}/albums | 
+*UserApi* | [**apiUsersIdEventsGet**](docs/UserApi.md#apiUsersIdEventsGet) | **GET** /api/users/{id}/events | 
+*UserApi* | [**apiUsersIdFollowedArtistsArtistIdGet**](docs/UserApi.md#apiUsersIdFollowedArtistsArtistIdGet) | **GET** /api/users/{id}/followedArtists/{artistId} | 
+*UserApi* | [**apiUsersIdFollowedArtistsGet**](docs/UserApi.md#apiUsersIdFollowedArtistsGet) | **GET** /api/users/{id}/followedArtists | 
+*UserApi* | [**apiUsersIdGet**](docs/UserApi.md#apiUsersIdGet) | **GET** /api/users/{id} | 
+*UserApi* | [**apiUsersIdMessagesDelete**](docs/UserApi.md#apiUsersIdMessagesDelete) | **DELETE** /api/users/{id}/messages | 
+*UserApi* | [**apiUsersIdMessagesGet**](docs/UserApi.md#apiUsersIdMessagesGet) | **GET** /api/users/{id}/messages | 
+*UserApi* | [**apiUsersIdMessagesPost**](docs/UserApi.md#apiUsersIdMessagesPost) | **POST** /api/users/{id}/messages | 
+*UserApi* | [**apiUsersIdProfileCommentsGet**](docs/UserApi.md#apiUsersIdProfileCommentsGet) | **GET** /api/users/{id}/profileComments | 
+*UserApi* | [**apiUsersIdProfileCommentsPost**](docs/UserApi.md#apiUsersIdProfileCommentsPost) | **POST** /api/users/{id}/profileComments | 
+*UserApi* | [**apiUsersIdRatedSongsGet**](docs/UserApi.md#apiUsersIdRatedSongsGet) | **GET** /api/users/{id}/ratedSongs | 
+*UserApi* | [**apiUsersIdRatedSongsSongIdGet**](docs/UserApi.md#apiUsersIdRatedSongsSongIdGet) | **GET** /api/users/{id}/ratedSongs/{songId} | 
+*UserApi* | [**apiUsersIdReportsPost**](docs/UserApi.md#apiUsersIdReportsPost) | **POST** /api/users/{id}/reports | 
+*UserApi* | [**apiUsersIdSettingsSettingNamePost**](docs/UserApi.md#apiUsersIdSettingsSettingNamePost) | **POST** /api/users/{id}/settings/{settingName} | 
+*UserApi* | [**apiUsersIdSongListsGet**](docs/UserApi.md#apiUsersIdSongListsGet) | **GET** /api/users/{id}/songLists | 
+*UserApi* | [**apiUsersMessagesMessageIdGet**](docs/UserApi.md#apiUsersMessagesMessageIdGet) | **GET** /api/users/messages/{messageId} | 
+*UserApi* | [**apiUsersNamesGet**](docs/UserApi.md#apiUsersNamesGet) | **GET** /api/users/names | 
+*UserApi* | [**apiUsersProfileCommentsCommentIdDelete**](docs/UserApi.md#apiUsersProfileCommentsCommentIdDelete) | **DELETE** /api/users/profileComments/{commentId} | 
+*UserApi* | [**apiUsersProfileCommentsCommentIdPost**](docs/UserApi.md#apiUsersProfileCommentsCommentIdPost) | **POST** /api/users/profileComments/{commentId} | 
+*VenueApi* | [**apiVenuesGet**](docs/VenueApi.md#apiVenuesGet) | **GET** /api/venues | 
+*VenueApi* | [**apiVenuesIdDelete**](docs/VenueApi.md#apiVenuesIdDelete) | **DELETE** /api/venues/{id} | 
+*VenueApi* | [**apiVenuesIdReportsPost**](docs/VenueApi.md#apiVenuesIdReportsPost) | **POST** /api/venues/{id}/reports | 
 
 
 ## Documentation for Models
@@ -410,6 +410,5 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
-
 
 
