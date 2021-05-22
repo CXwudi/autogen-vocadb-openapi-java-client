@@ -35,7 +35,7 @@ Refer to [jitpack](https://jitpack.io/#CXwudi/autogen-vocadb-openapi-java-client
 
 Please read VocaDB API Usage [Rules](https://github.com/VocaDB/vocadb/wiki/Public-API#api-usage-rules) before using this API client.
 
-Refer to the [generated documentation](./README%20Original.md#Documentation%20for%20API%20Endpoints) for how to use this client
+Refer to the [generated documentation](./README%20Original.md#documentation-for-api-endpoints) for how to use this client
 
 ## Notes
 
