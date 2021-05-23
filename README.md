@@ -29,7 +29,7 @@ openapi-generator-cli generate \
 
 ## Installation
 
-Refer to [jitpack](https://jitpack.io/#CXwudi/autogen-vocadb-openapi-java-client/1.0.0)
+Refer to [jitpack](https://jitpack.io/#CXwudi/vocadb-openapi-client-java/1.0.1)
 
 ## How to use
 
