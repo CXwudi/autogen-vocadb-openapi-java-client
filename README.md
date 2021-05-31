@@ -39,5 +39,13 @@ Refer to the [generated documentation](./README%20Original.md#documentation-for-
 
 ## Notes
 
-- Highly recommended to set your custom User-Agent in `ApiClient` for VocaDB to identity you
+- Highly recommended to set your custom User-Agent in `ApiClient` for VocaDB to [identity you](https://github.com/VocaDB/vocadb/wiki/Public-API#api-usage-rules)
+- take a look of your client, understand the structure
+  - api directory is where you use to call the VocaDB Rest API
+  - `ApiClient` is the core class
+- by default, the base URL is always `http://localhost`, change it to `https://vocadb.net` by calling `setBaseurl()` on `ApiClient` class
+  - for Java 11 native HTTP client, use `setHostname("vocadb.net")` and `setScheme("https")` (Java 11 native HTTP client doesn't have `setBaseurl()`). If you don't do `setScheme("https")`, you need to manually add `builder.followRedirects(Redirect.NORMAL)`
 - This client probably won't work well for any non-GET requests. Base on VocaDB [document](https://github.com/VocaDB/vocadb/wiki/Public-API#authenticated-apis), you need to set some custom header to be able to use it.
+- because VocaDB and UtaiteDB use the same codebase, you could probably change the base URL to `https://utaitedb.net` to make your client an UtaiteDB Api Client.
+  - be aware that some artist types are a bit different between VocaDB and UtaiteDB, as ycanardeau [said](https://discord.com/channels/309072240639737866/723937904216375317/844444328662401044)
+  - if having problems on UtaiteDB, you can always grab the `swagger.json` file from UtaiteDB API [page](https://utaitedb.net/swagger/index.html) and regernate your client just for UtaiteDB
