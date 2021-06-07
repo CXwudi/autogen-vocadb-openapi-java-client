@@ -40,7 +40,7 @@ Refer to the [generated documentation](./README%20Original.md#documentation-for-
 ## Notes
 
 - Highly recommended to set your custom User-Agent in `ApiClient` for VocaDB to [identity you](https://github.com/VocaDB/vocadb/wiki/Public-API#api-usage-rules)
-- This client probably won't work well for any non-GET requests. Base on VocaDB [document](https://github.com/VocaDB/vocadb/wiki/Public-API#authenticated-apis), you need to set some custom header to be able to use it.
+- This client probably won't work well for any non-GET requests. Base on VocaDB [document](https://github.com/VocaDB/vocadb/wiki/Public-API#authenticated-apis), you need to set some custom header to be able to use it. This probably can be done by tunning the `RestTemplate` instance inside `ApiClient`
 - Take a look of your client, understand the structure
   - api directory is where you use to call the VocaDB Rest API
   - `ApiClient` is the core class
