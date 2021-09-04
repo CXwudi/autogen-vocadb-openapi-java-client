@@ -27,9 +27,9 @@ openapi-generator-cli generate \
   -o vocadb-api-client-resttemplate
 ```
 
-## Installation
+## How to import
 
-Refer to [jitpack](https://jitpack.io/#CXwudi/vocadb-openapi-client-java/1.0.1)
+Refer to [jitpack](https://jitpack.io/#CXwudi/vocadb-openapi-client-java/1.0.1) to see how to import
 
 ## How to use
 
