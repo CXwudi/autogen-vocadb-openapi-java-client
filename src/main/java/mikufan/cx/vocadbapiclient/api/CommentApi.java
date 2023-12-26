@@ -32,8 +32,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T01:04:32.642512Z[Etc/UTC]")
-@Component("mikufan.cx.vocadbapiclient.api.CommentApi")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-26T07:29:58.607748373Z[Etc/UTC]")
 public class CommentApi {
     private ApiClient apiClient;
 
@@ -41,7 +40,6 @@ public class CommentApi {
         this(new ApiClient());
     }
 
-    @Autowired
     public CommentApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
@@ -207,6 +205,7 @@ public class CommentApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "entryId", entryId));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -329,6 +328,7 @@ public class CommentApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "entryFields", entryFields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "lang", lang));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sortRule", sortRule));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"

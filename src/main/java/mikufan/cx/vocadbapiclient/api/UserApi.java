@@ -64,8 +64,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-27T01:04:32.642512Z[Etc/UTC]")
-@Component("mikufan.cx.vocadbapiclient.api.UserApi")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-26T07:29:58.607748373Z[Etc/UTC]")
 public class UserApi {
     private ApiClient apiClient;
 
@@ -73,7 +72,6 @@ public class UserApi {
         this(new ApiClient());
     }
 
-    @Autowired
     public UserApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
@@ -181,6 +179,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "collectionStatus", collectionStatus));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "mediaType", mediaType));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "rating", rating));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -366,6 +365,7 @@ public class UserApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -460,6 +460,7 @@ public class UserApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "entryType", entryType));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "entryId", entryId));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -586,6 +587,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "knowsLanguage", knowsLanguage));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -679,7 +681,7 @@ public class UserApi {
      * @return AlbumForUserForApiContractPartialFindResult
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public AlbumForUserForApiContractPartialFindResult apiUsersIdAlbumsGet(Integer id, String query, Integer tagId, String tag, Integer artistId, PurchaseStatuses purchaseStatuses, Integer releaseEventId, DiscType albumTypes, List<AdvancedSearchFilterParams> advancedFilters, Integer start, Integer maxResults, Boolean getTotalCount, AlbumSortRule sort, NameMatchMode nameMatchMode, AlbumOptionalFields fields, ContentLanguagePreference lang, mikufan.cx.vocadbapiclient.model.MediaType mediaType) throws RestClientException {
+    public AlbumForUserForApiContractPartialFindResult apiUsersIdAlbumsGet(Integer id, String query, Integer tagId, String tag, Integer artistId, PurchaseStatuses purchaseStatuses, Integer releaseEventId, DiscType albumTypes, List<AdvancedSearchFilterParams> advancedFilters, Integer start, Integer maxResults, Boolean getTotalCount, AlbumSortRule sort, NameMatchMode nameMatchMode, AlbumOptionalFields fields, ContentLanguagePreference lang, MediaType mediaType) throws RestClientException {
         return apiUsersIdAlbumsGetWithHttpInfo(id, query, tagId, tag, artistId, purchaseStatuses, releaseEventId, albumTypes, advancedFilters, start, maxResults, getTotalCount, sort, nameMatchMode, fields, lang, mediaType).getBody();
     }
 
@@ -707,7 +709,7 @@ public class UserApi {
      * @return ResponseEntity&lt;AlbumForUserForApiContractPartialFindResult&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<AlbumForUserForApiContractPartialFindResult> apiUsersIdAlbumsGetWithHttpInfo(Integer id, String query, Integer tagId, String tag, Integer artistId, PurchaseStatuses purchaseStatuses, Integer releaseEventId, DiscType albumTypes, List<AdvancedSearchFilterParams> advancedFilters, Integer start, Integer maxResults, Boolean getTotalCount, AlbumSortRule sort, NameMatchMode nameMatchMode, AlbumOptionalFields fields, ContentLanguagePreference lang, mikufan.cx.vocadbapiclient.model.MediaType mediaType) throws RestClientException {
+    public ResponseEntity<AlbumForUserForApiContractPartialFindResult> apiUsersIdAlbumsGetWithHttpInfo(Integer id, String query, Integer tagId, String tag, Integer artistId, PurchaseStatuses purchaseStatuses, Integer releaseEventId, DiscType albumTypes, List<AdvancedSearchFilterParams> advancedFilters, Integer start, Integer maxResults, Boolean getTotalCount, AlbumSortRule sort, NameMatchMode nameMatchMode, AlbumOptionalFields fields, ContentLanguagePreference lang, MediaType mediaType) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'id' is set
@@ -740,6 +742,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "lang", lang));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "mediaType", mediaType));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -793,6 +796,7 @@ public class UserApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "relationshipType", relationshipType));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -931,6 +935,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "lang", lang));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -984,6 +989,7 @@ public class UserApi {
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -1035,6 +1041,7 @@ public class UserApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("multi".toUpperCase(Locale.ROOT)), "messageId", messageId));
+
 
         final String[] localVarAccepts = {  };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
@@ -1101,6 +1108,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "start", start));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "maxResults", maxResults));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "getTotalCount", getTotalCount));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -1213,6 +1221,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "start", start));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "maxResults", maxResults));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "getTotalCount", getTotalCount));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -1370,6 +1379,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "nameMatchMode", nameMatchMode));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "lang", lang));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
@@ -1616,6 +1626,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "sort", sort));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "fields", fields));
 
+
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
          };
@@ -1716,6 +1727,7 @@ public class UserApi {
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "nameMatchMode", nameMatchMode));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "maxResults", maxResults));
         localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "includeDisabled", includeDisabled));
+
 
         final String[] localVarAccepts = { 
             "text/plain", "application/json", "text/json"
